@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-        "start": "node server.js",
-        "client": "cd client && yarn start",
-        "server": "nodemon server.js",
+    "start": "node server.js",
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,7 +16,8 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.9.20"
+    "mongoose": "^5.9.20",
+    "ngx-bootstrap": "^5.6.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

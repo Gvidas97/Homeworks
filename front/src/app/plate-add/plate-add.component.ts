@@ -17,8 +17,8 @@ export class PlateAddComponent implements OnInit {
     this.plateForm = this.fb.group({
       plateName: ['', Validators.required ],
       plateSurname: ['', Validators.required ],
-      platePlates: ['', Validators.required ]
-    });
+      platePlates: ['', Validators.required, Validators.pattern('^[A-Z]{3}\s[0-9]{3}$') 
+    ]});
   }
 
   addPlate(plateName, plateSurname, platePlates) {

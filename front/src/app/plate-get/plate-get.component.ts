@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { TemplateRef } from '@angular/core';
 import Plate from '../Plate';
 import { PlatesService } from '../plates.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-plate-get',
@@ -11,7 +13,9 @@ export class PlateGetComponent implements OnInit {
   items = [];
   pageOfItems: Array<any>;
   plates: Plate[];
+  
   constructor(private ps: PlatesService) { }
+
 
   ngOnInit() {
     this.ps
@@ -34,5 +38,6 @@ onChangePage(pageOfItems: Array<any>) {
   this.pageOfItems = pageOfItems;
 }
 
+ 
 }
 

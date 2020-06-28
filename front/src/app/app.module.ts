@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { PlatesService } from './plates.service';
 import { HttpClientModule } from '@angular/common/http';
 import { JwPaginationModule } from 'jw-angular-pagination';
-
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { JwPaginationModule } from 'jw-angular-pagination';
     ReactiveFormsModule,
     AppRoutingModule,
     FormsModule,
-    JwPaginationModule
+    JwPaginationModule,
+    TooltipModule.forRoot(),
   ],
   providers: [PlatesService],
   bootstrap: [AppComponent]

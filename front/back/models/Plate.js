@@ -9,7 +9,7 @@ let Plate = new Schema({
     type: String
   },
   platePlates: {
-    type: String
+    type: String, unique: true
   }
 },{
     collection: 'Plate'

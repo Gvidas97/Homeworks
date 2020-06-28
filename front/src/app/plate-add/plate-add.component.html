@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-body">
+      <form [formGroup]="plateForm" novalidate>
+        <div class="form-group">
+          <label class="col-md-4">First Name</label>
+          <input id="plateName" type="text" class="form-control" 
+          formControlName="plateName" 
+          #plateName />
+        </div>
+        <div *ngIf="plateForm.controls['plateName'].invalid && (plateForm.controls['plateName'].dirty || plateForm.controls['plateName'].touched)" class="alert alert-danger">
+            <div *ngIf="plateForm.controls['plateName'].errors.required">
+             Name is required.
+            </div>
+          </div>
+        <div class="form-group">
+            <label class="col-md-4">Last Name</label>
+            <input id="plateSurname=" type="text" class="form-control"
+            formControlName="plateSurname" 
+            #plateSurname />
+          </div>
+          <div *ngIf="plateForm.controls['plateSurname'].invalid && (plateForm.controls['plateSurname'].dirty || plateForm.controls['plateSurname'].touched)" class="alert alert-danger">
+            <div *ngIf="plateForm.controls['plateSurname'].errors.required">
+             Surname is required.
+            </div>
+          </div>
+        <div class="form-group"> 
+          <label class="col-md-4">Plates Name</label>
+          <input id="platePlates" type="text" class="form-control"
+          formControlName="platePlates" 
+          #platePlates >
+        </div>
+        <div *ngIf="plateForm.controls['platePlates'].invalid && (plateForm.controls['platePlates'].dirty || plateForm.controls['platePlates'].touched)" class="alert alert-danger">
+            <div *ngIf="plateForm.controls['platePlates'].errors.required">
+              Plate number is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <button (click) = "addPlate(plateName.value, plateSurname.value, platePlates.value)" type="submit" class="btn btn-primary"
+            [disabled]="plateForm.pristine || plateForm.invalid" >
+              Create Product
+            </button>
+    </div>
+      </form>
+    </div>
+  </div>
+
+ <!-- pattern="^[A-Z]{3}\s[0-9]{3}$" title="Number plates would be like: LOV 606" -->
